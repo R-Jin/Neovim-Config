@@ -47,6 +47,10 @@ keymap.set("n", "<leader>gc", "<cmd>Neogit commit<CR>", { desc = "git commit" })
 keymap.set("n", "<leader>gp", "<cmd>Neogit push<CR>", { desc = "git push" })
 keymap.set("n", "<leader>gP", "<cmd>Neogit pull<CR>", { desc = "git pull" })
 
+-- Indent mode
+keymap.set("v", ">", ">gv", { desc = "Indent" })
+keymap.set("v", "<", "<gv", { desc = "Undo indent" })
+
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
