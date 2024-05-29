@@ -27,7 +27,7 @@ return {
 
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+				completeopt = "menu,menuone,preview",
 			},
 
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
@@ -51,6 +51,10 @@ return {
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 			}),
+
+			experimental = {
+				ghost_text = true,
+			},
 
 			-- sources for autocompletion
 			sources = cmp.config.sources({
