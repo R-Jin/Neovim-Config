@@ -7,5 +7,15 @@ return {
 		-- Only one of these is needed, not both.
 		"nvim-telescope/telescope.nvim", -- optional
 	},
-	config = true,
+	config = function()
+		local neogit = require("neogit")
+		neogit.setup({
+			mappings = {
+				popup = {
+					["p"] = "PushPopup",
+					["P"] = "PullPopup",
+				},
+			},
+		})
+	end,
 }
