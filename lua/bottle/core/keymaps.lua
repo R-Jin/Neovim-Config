@@ -41,8 +41,11 @@ keymap.set("n", "<leader>pr", "<cmd>SessionRestore<CR>", { desc = "Restore last 
 keymap.set("n", "<leader>ps", "<cmd>SessionSave<CR>", { desc = "Save workspace" })
 
 -- neogit
-keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Neogit status" })
-keymap.set("n", "<leader>gc", "<cmd>Neogit commit<CR>", { desc = "Open Neogit commit popup" })
+keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "git status" })
+keymap.set("n", "<leader>gl", "<cmd>Neogit log<CR>", { desc = "git log" })
+keymap.set("n", "<leader>gc", "<cmd>Neogit commit<CR>", { desc = "git commit" })
+keymap.set("n", "<leader>gp", "<cmd>Neogit push<CR>", { desc = "git push" })
+keymap.set("n", "<leader>gP", "<cmd>Neogit pull<CR>", { desc = "git pull" })
 
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
